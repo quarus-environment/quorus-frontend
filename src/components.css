@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Rubik:wght@400;700&display=swap');
+
+.header {
+    display: flex;
+    height: 70px;
+
+    align-items: center;
+
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 18px;
+    margin-right: 200px;
+    justify-content: space-between;
+}
+
+.Main {
+    /*background-color: goldenrod;*/
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Main__discr__item1 {
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+    /*background-color: purple;*/
+    height: 100px;
+    width: 450px;
+}
+
+.Main__discr__item2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    /*background-color: goldenrod;*/
+    height: 40px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.Main__discr__item3 {
+    cursor: pointer;
+}
+
+button {
+    height: 50px;
+    width: 250px;
+    background-color: #446094;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 12px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #446094;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #446094;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.algos{
+    list-style: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    /*background-color: purple;*/
+
+
+}
+
+.wrapper {
+    max-width: 1110px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /*background-color: rgba(86,92,0,0.71)*/
+
+}
+
+.algos {
+    padding: 0;
+}
+
+.someBlock {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    background-color: #446094;
+}
+
+.HowItWorks {
+    /*background-color: blue;*/
+
+}
