@@ -1,4 +1,5 @@
 import './components.css';
+import {useState} from "react";
 
 export const Header = () => {
     return(
@@ -24,9 +25,7 @@ export const Main = () => {
 
 
             </div>
-            <div className={'Main__uploader someBlock'}>
-                тут будет загрузка фото4ек
-            </div>
+            <ImageUploader />
         </div>
 
     )
@@ -46,5 +45,50 @@ export const HowItWorks = () => {
             <div className={'someBlock'}>Видео</div>
 
         </div>
+    )
+}
+
+export const ImageUploader = () => {
+
+        const [drag, setDrag] = useState(false)
+
+        function dragStartHandler (e) {
+            e.preventDefault()
+            setDrag(true)
+        }
+
+        function dragLeaveHandler (e) {
+            e.preventDefault()
+            setDrag(false)
+        }
+
+        function onDropHandler(e) {
+            e.preventDefault()
+            let files = [...e.dataTransfer.files]
+            console.log(files)
+        }
+
+
+        return(
+
+
+            <div className={'imageUploade'}>
+                <div></div>
+                {drag?
+                    <div className={'dropArea'}
+                         onDragStart={e=>dragStartHandler(e)}
+                         onDragLeave={e=>dragLeaveHandler(e)}
+                         onDragOver={e=>dragStartHandler(e)}
+                         onDrop={e=>onDropHandler(e)}
+                    >Drop files</div>
+                    : <div
+                        onDragStart={e=>dragStartHandler(e)}
+                        onDragLeave={e=>dragLeaveHandler(e)}
+                        onDragOver={e => dragStartHandler(e)}>
+
+                        Drag files to load them</div>
+                }
+            </div>
+
     )
 }

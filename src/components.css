@@ -146,3 +146,11 @@ input:checked + .slider:before {
     /*background-color: blue;*/
 
 }
+
+.imageUploader {
+    background-color: darkred;
+}
+
+.dropArea {
+    font-size: 18px;
+}
