@@ -147,15 +147,12 @@ input:checked + .slider:before {
     background-color: #446094;
 }
 
-.how-it-works {
-    /*background-color: blue;*/
-
-}
-
-.image-uploader {
-    background-color: darkred;
-}
-
 .drop-area {
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
     font-size: 18px;
 }

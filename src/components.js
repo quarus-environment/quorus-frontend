@@ -1,5 +1,6 @@
 import "./components.css";
 import { useState } from "react";
+import axios from "axios";
 
 // todo: разбей на компоненты пж пофайлово
 export const Header = () => {
@@ -63,11 +64,15 @@ export const ImageUploader = () => {
     e.preventDefault();
     let files = [...e.dataTransfer.files];
     console.log(files);
+    setDrag(false);
+    axios.post("http://127.0.0.1:5000/", files).then((res) => {
+      console.log(res);
+      console.log(files);
+    });
   }
 
   return (
-    <div className={"imageUploade"}>
-      <div></div>
+    <div>
       {drag ? (
         <div
           className={"drop-area"}
@@ -76,15 +81,16 @@ export const ImageUploader = () => {
           onDragOver={(e) => dragStartHandler(e)}
           onDrop={(e) => onDropHandler(e)}
         >
-          Drop files
+          <p>Drop files</p>
         </div>
       ) : (
         <div
+          className={"drop-area"}
           onDragStart={(e) => dragStartHandler(e)}
           onDragLeave={(e) => dragLeaveHandler(e)}
           onDragOver={(e) => dragStartHandler(e)}
         >
-          Drag files to load them
+          <p>Drag files to load them</p>
         </div>
       )}
     </div>
