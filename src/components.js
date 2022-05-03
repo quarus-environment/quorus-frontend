@@ -49,6 +49,7 @@ export const HowItWorks = () => {
 
 export const ImageUploader = () => {
   const [drag, setDrag] = useState(false);
+  const [image, setImage] = useState("");
 
   function dragStartHandler(e) {
     e.preventDefault();
@@ -63,10 +64,12 @@ export const ImageUploader = () => {
   function onDropHandler(e) {
     e.preventDefault();
     let files = [...e.dataTransfer.files];
-    console.log(files);
+    const formData = new FormData();
+    formData.append("file", files?.[0]);
     setDrag(false);
-    axios.post("http://127.0.0.1:5000/", files).then((res) => {
+    axios.post("http://127.0.0.1:5000/", formData).then((res) => {
       console.log(res);
+      setImage("http://127.0.0.1:5000/uploaded_files/" + res.data);
       console.log(files);
     });
   }
@@ -93,6 +96,7 @@ export const ImageUploader = () => {
           <p>Drag files to load them</p>
         </div>
       )}
+      <img src={image} alt={"q23"} />
     </div>
   );
 };
