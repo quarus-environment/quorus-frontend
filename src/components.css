@@ -12,7 +12,7 @@
     justify-content: space-between;
 }
 
-.Main {
+.main {
     /*background-color: goldenrod;*/
     height: 700px;
     display: flex;
@@ -20,7 +20,7 @@
     justify-content: space-around;
 }
 
-.Main__discr__item1 {
+.main__description__item-1 {
     font-size: 40px;
     font-family: 'Rubik', sans-serif;
     /*background-color: purple;*/
@@ -28,7 +28,7 @@
     width: 450px;
 }
 
-.Main__discr__item2 {
+.main__description__item-2 {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     /*background-color: goldenrod;*/
@@ -39,7 +39,7 @@
     margin-bottom: 15px;
 }
 
-.Main__discr__item3 {
+.main__description__item-3 {
     cursor: pointer;
 }
 
@@ -62,7 +62,9 @@ button {
 }
 
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+.switch input {
+    display: none;
+}
 
 /* The slider */
 .slider {
@@ -112,7 +114,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-.algos{
+.algos {
     list-style: none;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
