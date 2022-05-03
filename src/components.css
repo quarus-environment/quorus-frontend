@@ -20,6 +20,8 @@
     justify-content: space-around;
 }
 
+
+/* todo: тоже не особо понятно что за итем*/
 .main__description__item-1 {
     font-size: 40px;
     font-family: 'Rubik', sans-serif;
@@ -136,7 +138,8 @@ input:checked + .slider:before {
     padding: 0;
 }
 
-.someBlock {
+/*todo: чтот непонятно че он делает*/
+.some-block {
     display: flex;
     justify-content: center;
     width: 300px;
@@ -144,15 +147,15 @@ input:checked + .slider:before {
     background-color: #446094;
 }
 
-.HowItWorks {
+.how-it-works {
     /*background-color: blue;*/
 
 }
 
-.imageUploader {
+.image-uploader {
     background-color: darkred;
 }
 
-.dropArea {
+.drop-area {
     font-size: 18px;
 }

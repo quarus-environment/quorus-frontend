@@ -33,7 +33,7 @@ export const Main = () => {
 
 export const HowItWorks = () => {
   return (
-    <div className={"HowItWorks wrapper main"}>
+    <div className={"how-it-works wrapper main"}>
       <div className={""}>
         <ul className={"algos"}>
           <p>How it works?</p>
@@ -41,7 +41,7 @@ export const HowItWorks = () => {
           <li>Enjoy</li>
         </ul>
       </div>
-      <div className={"someBlock"}>Видео</div>
+      <div className={"some-block"}>Видео</div>
     </div>
   );
 };
@@ -70,7 +70,7 @@ export const ImageUploader = () => {
       <div></div>
       {drag ? (
         <div
-          className={"dropArea"}
+          className={"drop-area"}
           onDragStart={(e) => dragStartHandler(e)}
           onDragLeave={(e) => dragLeaveHandler(e)}
           onDragOver={(e) => dragStartHandler(e)}
