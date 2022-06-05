@@ -37,12 +37,16 @@ export const HowItWorks = () => {
     <div className={"how-it-works wrapper main"}>
       <div className={""}>
         <ul className={"algos"}>
-          <p>How it works?</p>
-          <li>Just drag your image into the file uploader section</li>
-          <li>Enjoy</li>
+          <b className={"how-it-works_title"}>How it works?</b>
+          <ul className={"how-it-works_list"}>
+            <li className={"how-it-works_list_item"}>You distort the photo</li>
+            <li className={"how-it-works_list_item"}>A trained neural network processes it</li>
+            <li className={"how-it-works_list_item"}>Chooses the most accurate characteristics</li>
+            <li className={"how-it-works_list_item"}>And gives all the data about the mouse</li>
+          </ul>
         </ul>
       </div>
-      <div className={"some-block"}>Видео</div>
+      <div className={"some-block"}><div>Видео</div></div>
     </div>
   );
 };

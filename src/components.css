@@ -1,4 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Rubik:wght@400;700&display=swap');
+/*----------------------------------Обнуление-----------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+  ​
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+  ​
+body {
+  line-height: 1;
+}
+  ​
+ol, ul {
+  list-style: none;
+}
+  ​
+blockquote, q {
+  quotes: none;
+}
+  ​
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+  ​
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*----------------------------------Обнуление-----------------------------------*/
 
 .header {
     display: flex;
@@ -19,7 +70,6 @@
     align-items: center;
     justify-content: space-around;
 }
-
 
 /* todo: тоже не особо понятно что за итем*/
 .main__description__item-1 {
@@ -145,6 +195,7 @@ input:checked + .slider:before {
     width: 300px;
     height: 200px;
     background-color: #446094;
+    align-items: center;
 }
 
 .drop-area {
@@ -156,3 +207,33 @@ input:checked + .slider:before {
     background-color: #f0f0f0;
     font-size: 18px;
 }
+
+
+.how-it-works_list{
+
+}
+
+.how-it-works_list li{
+    position: relative;
+    font-size: 19px;
+}
+
+.how-it-works_list li::before{
+    position: relative;
+    content: '';
+    background: url(images/list_img.png) 0 0 no-repeat;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 6px;
+    left: -20px;
+}
+
+.how-it-works_title{
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+}
+.how-it-works_list_item{
+    margin-top: 18px ;
+}
+
