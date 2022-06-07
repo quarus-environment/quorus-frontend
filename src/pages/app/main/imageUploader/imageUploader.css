@@ -1,0 +1,20 @@
+.imageUploader {
+    /*background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(33,129,122,1) 53%, rgba(0,212,255,1) 100%);*/
+
+    background: radial-gradient(circle, rgba(5,3,40,1) 0%, rgba(33,129,122,0.8702074579831933) 53%, rgba(0,212,255,0.36320465686274506) 100%);
+    width: 510px;
+    height: 340px;
+    border-radius: 30px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    position: relative;
+
+}
+
+.dropArea {
+    font-size: 20px;
+}

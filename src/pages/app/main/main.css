@@ -1,0 +1,47 @@
+.Main {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Main__discr__item1 {
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+    /*background-color: purple;*/
+    height: 100px;
+    width: 450px;
+}
+
+.Main__discr__item2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    /*background-color: goldenrod;*/
+    height: 40px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.main__description__item3 {
+    cursor: pointer;
+}
+
+button {
+    height: 50px;
+    width: 250px;
+    background-color: rgba(33, 129, 122, 1.00);
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 12px;
+}
+
+.wrapper {
+    max-width: 1110px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}

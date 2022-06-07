@@ -1,40 +1,40 @@
 import "./components.css";
 import { useState } from "react";
-import axios from "axios";
+import image from "./icons/arrow.png";
+import mouse from "./icons/МАУС.jpeg";
 
-// todo: разбей на компоненты пж пофайлово
-export const Header = () => {
+/*export const Header = () => {
   return (
     <div className={"header wrapper"}>
       <p>Quorus</p>
       <label className="switch">
         <input type="checkbox" />
-        <span className="slider round"></span>
       </label>
     </div>
   );
-};
+};*/
 
-export const Main = () => {
+/*export const Main = () => {
   return (
-    <div className={"main wrapper"}>
-      <div className={"Main__disription"}>
-        <div className={"main__description__item-1"}>
+    <div className="Main wrapper">
+      <div className="Main__disription">
+        <div className={"Main__discr__item1"}>
           <b>Tool that will catch your mouse meow</b>
         </div>
-        <div className={"main__description__item-2"}>
+        <div className={"Main__discr__item2"}>
           Just uploud your picture and see the result
         </div>
-        <button className={"main__description__item-3"}>How it works?</button>
+        <button className={"main__description__item3"}>How it works?</button>
       </div>
       <ImageUploader />
     </div>
   );
-};
+};*/
 
+/*
 export const HowItWorks = () => {
   return (
-    <div className={"how-it-works wrapper main"}>
+    <div className={"HowItWorks wrapper Main"} id={"huy"}>
       <div className={""}>
         <ul className={"algos"}>
           <p>How it works?</p>
@@ -42,14 +42,15 @@ export const HowItWorks = () => {
           <li>Enjoy</li>
         </ul>
       </div>
-      <div className={"some-block"}>Видео</div>
+      <div className={"someBlock"}>Видео</div>
     </div>
   );
 };
+*/
 
+/*
 export const ImageUploader = () => {
   const [drag, setDrag] = useState(false);
-  const [image, setImage] = useState("");
 
   function dragStartHandler(e) {
     e.preventDefault();
@@ -64,39 +65,64 @@ export const ImageUploader = () => {
   function onDropHandler(e) {
     e.preventDefault();
     let files = [...e.dataTransfer.files];
-    const formData = new FormData();
-    formData.append("file", files?.[0]);
-    setDrag(false);
-    axios.post("http://127.0.0.1:5000/", formData).then((res) => {
-      console.log(res);
-      setImage("http://127.0.0.1:5000/uploaded_files/" + res.data);
-      console.log(files);
-    });
+    console.log(files);
   }
+  const [status, setStatus] = useState(false);
 
   return (
-    <div>
+    <div className={"imageUploader"}>
       {drag ? (
         <div
-          className={"drop-area"}
+          className={"dropArea"}
           onDragStart={(e) => dragStartHandler(e)}
           onDragLeave={(e) => dragLeaveHandler(e)}
           onDragOver={(e) => dragStartHandler(e)}
           onDrop={(e) => onDropHandler(e)}
         >
-          <p>Drop files</p>
+          Drop files
         </div>
       ) : (
         <div
-          className={"drop-area"}
           onDragStart={(e) => dragStartHandler(e)}
           onDragLeave={(e) => dragLeaveHandler(e)}
           onDragOver={(e) => dragStartHandler(e)}
         >
-          <p>Drag files to load them</p>
+          <div className={"Upl"}>
+            <b>Drag files to load them</b>
+          </div>
         </div>
       )}
-      <img src={image} alt={"q23"} />
+      <Modal
+        active={status}
+        setActive={setStatus}
+        model={"Apple Magic Mouse 2"}
+      />
+      <button onClick={() => setStatus(true)}>попробуй жмать!</button>
     </div>
   );
 };
+*/
+
+export function Modal(props) {
+  return props.active ? (
+    <div className={"modal"}>
+      <div className={"mouse_description"}>Это {props.model}!</div>
+      <div className={"mouse_photo"}>
+        <img
+          className={"mouse_pic"}
+          src={mouse}
+          alt="тут должна была быть мышб"
+        />
+      </div>
+      <div className={"mouse_again"}>
+        <button
+          onClick={() => props.setActive(false)}
+          className={"mouse_again_button"}
+        >
+          <img className={"try_again"} src={image} alt="" />
+          Try again
+        </button>
+      </div>
+    </div>
+  ) : null;
+}

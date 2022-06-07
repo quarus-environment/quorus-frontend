@@ -1,6 +1,7 @@
 import "./App.css";
-import { Header, HowItWorks } from "./components";
-import { Main } from "./components";
+import { HowItWorks } from "./howItWorks/howItWorks";
+import { Main } from "./main/main";
+import { Header } from "./header/header";
 
 export function App() {
   return (

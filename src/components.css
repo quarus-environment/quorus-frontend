@@ -12,7 +12,7 @@
     justify-content: space-between;
 }
 
-.main {
+.Main {
     /*background-color: goldenrod;*/
     height: 700px;
     display: flex;
@@ -20,9 +20,7 @@
     justify-content: space-around;
 }
 
-
-/* todo: тоже не особо понятно что за итем*/
-.main__description__item-1 {
+.Main__discr__item1 {
     font-size: 40px;
     font-family: 'Rubik', sans-serif;
     /*background-color: purple;*/
@@ -30,7 +28,7 @@
     width: 450px;
 }
 
-.main__description__item-2 {
+.Main__discr__item2 {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     /*background-color: goldenrod;*/
@@ -41,14 +39,14 @@
     margin-bottom: 15px;
 }
 
-.main__description__item-3 {
+.main__description__item3 {
     cursor: pointer;
 }
 
 button {
     height: 50px;
     width: 250px;
-    background-color: #446094;
+    background-color: rgba(33, 129, 122, 1.00);
     color: white;
     border: none;
     font-size: 20px;
@@ -64,9 +62,7 @@ button {
 }
 
 /* Hide default HTML checkbox */
-.switch input {
-    display: none;
-}
+.switch input {display:none;}
 
 /* The slider */
 .slider {
@@ -116,7 +112,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-.algos {
+.algos{
     list-style: none;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
@@ -138,8 +134,7 @@ input:checked + .slider:before {
     padding: 0;
 }
 
-/*todo: чтот непонятно че он делает*/
-.some-block {
+.someBlock {
     display: flex;
     justify-content: center;
     width: 300px;
@@ -147,12 +142,96 @@ input:checked + .slider:before {
     background-color: #446094;
 }
 
-.drop-area {
-    width: 400px;
-    height: 250px;
+
+.imageUploader {
+    /*background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(33,129,122,1) 53%, rgba(0,212,255,1) 100%);*/
+
+    background: radial-gradient(circle, rgba(5,3,40,1) 0%, rgba(33,129,122,0.8702074579831933) 53%, rgba(0,212,255,0.36320465686274506) 100%);
+    width: 510px;
+    height: 340px;
+    border-radius: 30px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
-    font-size: 18px;
+    color: white;
+
+    position: relative;
+
+}
+
+.dropArea {
+    font-size: 20px;
+}
+
+/*mg {
+    width: 45px;
+    height: 45px;
+}
+
+.Upl {
+    width: 230px;
+    height: 90px;
+    display: flex;
+
+}*/
+
+.modal {
+    background-color: rgb(136, 184, 182);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    /*display: flex;
+    align-items: center;*/
+    border-radius: 30px;
+}
+
+.mouse_pic {
+    width: 260px;
+    height: 120px;
+
+}
+
+.try_again {
+    width: 30px;
+    height: 30px;
+}
+
+.mouse_description {
+    /*background-color: yellow;*/
+    /*width: 510px;*/
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse_photo {
+    /*background-color: chartreuse;*/
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.mouse_again {
+    /*background-color: cornflowerblue;*/
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mouse_again_button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 160px;
 }
