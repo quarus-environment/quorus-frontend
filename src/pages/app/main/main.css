@@ -1,11 +1,15 @@
-.Main {
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+.main {
     height: 700px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.Main__discr__item1 {
+.main__description__item1 {
     font-size: 40px;
     font-family: 'Rubik', sans-serif;
     /*background-color: purple;*/
@@ -13,7 +17,7 @@
     width: 450px;
 }
 
-.Main__discr__item2 {
+.main__description__item2 {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     /*background-color: goldenrod;*/
@@ -28,14 +32,14 @@
     cursor: pointer;
 }
 
-button {
+.main-button {
     height: 50px;
     width: 250px;
     background-color: rgba(33, 129, 122, 1.00);
     color: white;
     border: none;
     font-size: 20px;
-    font-family: 'Rubik', sans-serif;
+
     border-radius: 12px;
 }
 

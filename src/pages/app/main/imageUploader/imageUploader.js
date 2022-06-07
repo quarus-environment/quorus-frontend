@@ -22,35 +22,41 @@ export const ImageUploader = () => {
   }
   const [status, setStatus] = useState(false);
 
+  if (drag) {
+    return (
+      <div
+        className="image-uploader"
+        onDragStart={(e) => dragStartHandler(e)}
+        onDragLeave={(e) => dragLeaveHandler(e)}
+        onDragOver={(e) => dragStartHandler(e)}
+        onDrop={(e) => onDropHandler(e)}
+      >
+        <div className="drop-area">Drop files</div>
+        <Modal
+          active={status}
+          setActive={setStatus}
+          model="Apple Magic Mouse 2"
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className={"imageUploader"}>
-      {drag ? (
-        <div
-          className={"dropArea"}
-          onDragStart={(e) => dragStartHandler(e)}
-          onDragLeave={(e) => dragLeaveHandler(e)}
-          onDragOver={(e) => dragStartHandler(e)}
-          onDrop={(e) => onDropHandler(e)}
-        >
-          Drop files
-        </div>
-      ) : (
-        <div
-          onDragStart={(e) => dragStartHandler(e)}
-          onDragLeave={(e) => dragLeaveHandler(e)}
-          onDragOver={(e) => dragStartHandler(e)}
-        >
-          <div className={"Upl"}>
-            <b>Drag files to load them</b>
-          </div>
-        </div>
-      )}
+    <div
+      onDragStart={(e) => dragStartHandler(e)}
+      onDragLeave={(e) => dragLeaveHandler(e)}
+      onDragOver={(e) => dragStartHandler(e)}
+      className="image-uploader"
+    >
+      <b>Drag files to load them</b>
       <Modal
         active={status}
         setActive={setStatus}
-        model={"Apple Magic Mouse 2"}
+        model="Apple Magic Mouse 2"
       />
-      <button onClick={() => setStatus(true)}>попробуй жмать!</button>
+      <button onClick={() => setStatus(true)} className="button-loader">
+        попробуй жмать!
+      </button>
     </div>
   );
 };

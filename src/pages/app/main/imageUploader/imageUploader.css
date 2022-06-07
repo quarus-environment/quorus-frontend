@@ -1,4 +1,4 @@
-.imageUploader {
+.image-uploader {
     /*background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(33,129,122,1) 53%, rgba(0,212,255,1) 100%);*/
 
     background: radial-gradient(circle, rgba(5,3,40,1) 0%, rgba(33,129,122,0.8702074579831933) 53%, rgba(0,212,255,0.36320465686274506) 100%);
@@ -7,14 +7,24 @@
     border-radius: 30px;
     font-size: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     color: white;
 
     position: relative;
 
 }
 
-.dropArea {
+.button-loader {
+    padding: 10px 14px;
+    font-size: 18px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.drop-area {
     font-size: 20px;
 }
