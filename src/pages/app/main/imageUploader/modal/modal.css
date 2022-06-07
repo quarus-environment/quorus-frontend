@@ -1,59 +1,29 @@
 .modal {
-    background-color: rgb(136, 184, 182);
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    font-family: 'Rubik', sans-serif;
-    color: black;
-    /*display: flex;
-    align-items: center;*/
-    border-radius: 30px;
 }
 
 .mouse_pic {
-    width: 260px;
-    height: 120px;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
 }
 
-.try_again {
-    width: 30px;
-    height: 30px;
-}
 
 .mouse_description {
-    /*background-color: yellow;*/
-    /*width: 510px;*/
-    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.mouse_photo {
-    /*background-color: chartreuse;*/
-    height: 190px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.mouse_again {
-    /*background-color: cornflowerblue;*/
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.mouse_again_button {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 160px;
+    font-size: 18px;
+    color: #000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
 }

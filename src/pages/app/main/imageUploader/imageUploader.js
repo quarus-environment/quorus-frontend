@@ -5,6 +5,8 @@ import "./imageUploader.css";
 export const ImageUploader = () => {
   const [drag, setDrag] = useState(false);
 
+  const [image, setImage] = useState(null);
+
   function dragStartHandler(e) {
     e.preventDefault();
     setDrag(true);
@@ -52,7 +54,10 @@ export const ImageUploader = () => {
       <Modal
         active={status}
         setActive={setStatus}
-        model="Apple Magic Mouse 2"
+        model="Apple"
+        mouseLink={
+          "https://web-zoopark.ru/wp-content/uploads/2018/07/4-128.jpg"
+        }
       />
       <button onClick={() => setStatus(true)} className="button-loader">
         попробуй жмать!
