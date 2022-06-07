@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Modal } from "./modal/modal";
 import "./imageUploader.css";
+import axios from "axios";
 
 export const ImageUploader = () => {
   const [drag, setDrag] = useState(false);
 
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(
+    "https://web-zoopark.ru/wp-content/uploads/2018/07/4-128.jpg"
+  );
 
   function dragStartHandler(e) {
     e.preventDefault();
@@ -20,7 +23,13 @@ export const ImageUploader = () => {
   function onDropHandler(e) {
     e.preventDefault();
     let files = [...e.dataTransfer.files];
-    console.log(files);
+    const formData = new FormData();
+    formData.append("file", files?.[0]);
+    setDrag(false);
+    axios.post("http://127.0.0.1:5000/", formData).then((res) => {
+      setImage("http://127.0.0.1:5000/uploaded_files/" + res.data);
+      setStatus(true);
+    });
   }
   const [status, setStatus] = useState(false);
 
@@ -55,9 +64,7 @@ export const ImageUploader = () => {
         active={status}
         setActive={setStatus}
         model="Apple"
-        mouseLink={
-          "https://web-zoopark.ru/wp-content/uploads/2018/07/4-128.jpg"
-        }
+        mouseLink={image}
       />
       <button onClick={() => setStatus(true)} className="button-loader">
         попробуй жмать!

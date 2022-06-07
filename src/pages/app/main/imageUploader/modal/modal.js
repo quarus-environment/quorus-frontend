@@ -1,5 +1,3 @@
-import mouse from "../../../../../icons/МАУС.jpeg";
-import image from "../../../../../icons/arrow.png";
 import "./modal.css";
 
 export function Modal({ active, setActive, model, mouseLink }) {
