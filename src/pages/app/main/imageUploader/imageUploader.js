@@ -10,6 +10,8 @@ export const ImageUploader = () => {
     "https://web-zoopark.ru/wp-content/uploads/2018/07/4-128.jpg"
   );
 
+  const [brand, setBrand] = useState("Logitech");
+
   function dragStartHandler(e) {
     e.preventDefault();
     setDrag(true);
@@ -27,11 +29,13 @@ export const ImageUploader = () => {
     formData.append("file", files?.[0]);
     setDrag(false);
     axios.post("http://127.0.0.1:5000/", formData).then((res) => {
-      setImage("http://127.0.0.1:5000/uploaded_files/" + res.data);
-      setStatus(true);
+      setImage("http://127.0.0.1:5000/uploaded_files/" + res.data.file);
+      setBrand(res.data?.predict);
+      setModalActive(true);
     });
   }
-  const [status, setStatus] = useState(false);
+
+  const [isModalActive, setModalActive] = useState(false);
 
   if (drag) {
     return (
@@ -44,9 +48,9 @@ export const ImageUploader = () => {
       >
         <div className="drop-area">Drop files</div>
         <Modal
-          active={status}
-          setActive={setStatus}
-          model="Apple Magic Mouse 2"
+          active={isModalActive}
+          setActive={setModalActive}
+          model={brand}
         />
       </div>
     );
@@ -61,14 +65,11 @@ export const ImageUploader = () => {
     >
       <b>Drag files to load them</b>
       <Modal
-        active={status}
-        setActive={setStatus}
-        model="Apple"
+        active={isModalActive}
+        setActive={setModalActive}
+        model={brand}
         mouseLink={image}
       />
-      <button onClick={() => setStatus(true)} className="button-loader">
-        попробуй жмать!
-      </button>
     </div>
   );
 };
