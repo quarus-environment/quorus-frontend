@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Rubik', sans-serif;
 }
 
@@ -38,8 +38,8 @@
     background-color: rgba(33, 129, 122, 1.00);
     color: white;
     border: none;
-    font-size: 20px;
-
+    font-size: 16px;
+    
     border-radius: 12px;
 }
 

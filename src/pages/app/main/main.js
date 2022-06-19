@@ -11,9 +11,11 @@ export const Main = () => {
         <div className="main__description__item2">
           Just upload your picture and see the result
         </div>
-        <button className="main__description__item3 main-button">
-          How it works?
-        </button>
+        <a href="#huy">
+          <button className="main__description__item3 main-button">
+            How it works?
+          </button>
+        </a>
       </div>
       <ImageUploader />
     </div>
